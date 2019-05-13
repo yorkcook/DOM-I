@@ -41,26 +41,26 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navigation = Array.from(document.querySelectorAll('a'));
+const navigation = Array.from(document.querySelectorAll('a'));
 navigation.forEach((item, index) => item.textContent = siteContent.nav[`nav-item-${index + 1}`])
 
-let title = document.querySelector('h1');
+const title = document.querySelector('h1');
 title.textContent = siteContent.cta.h1;
 
 
-let globe = document.getElementById('cta-img')
-globe.setAttribute('src', "img/header-img.png");
+const globe = document.getElementById('cta-img')
+globe.setAttribute('src', siteContent ["cta"]["img-src"]);
 
 // let globe = document.querySelector("#cta-img");
 // globe.setAttribute('src', siteContent["cta"]["img-src"])
 
-let button = document.querySelector('button')
+const button = document.querySelector('button')
 button.textContent = siteContent.cta.button;
 
 
-let banner = document.getElementById("middle-img");
+const banner = document.getElementById("middle-img");
 banner.setAttribute('src', "img/mid-page-accent.jpg");
 
-let bottom = document.querySelector('footer')
+const bottom = document.querySelector('footer')
 bottom.textContent = siteContent.footer.copyright;
 
