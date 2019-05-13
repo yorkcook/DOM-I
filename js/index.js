@@ -40,3 +40,24 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navigation = document.querySelectorAll('nav');
+navigation.classList = "test";
+
+let title = document.querySelector('h1');
+title.textContent = 'Dom is Awesome';
+
+
+let globe = document.querySelector("#cta-img");
+globe.setAttribute('src', siteContent["cta"]["img-src"])
+
+let button = document.querySelector('button')
+button.textContent = 'Get Started'
+
+
+let banner = document.querySelector("#main-content");
+banner.setAttribute('src', siteContent[".middle-img"]["img-src"])
+
+let bottom = document.querySelector('footer')
+bottom.textContent = 'Copyright Great Idea! 2018'
+
