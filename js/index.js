@@ -37,12 +37,18 @@ const siteContent = {
   },
 };
 
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navigation = Array.from(document.querySelectorAll('a'));
 navigation.forEach((item, index) => item.textContent = siteContent.nav[`nav-item-${index + 1}`])
+
+navigation.forEach(element => element.style.color = "green")
+
+navigation.ap
 
 const title = document.querySelector('h1');
 title.textContent = siteContent.cta.h1;
@@ -57,10 +63,31 @@ globe.setAttribute('src', siteContent ["cta"]["img-src"]);
 const button = document.querySelector('button')
 button.textContent = siteContent.cta.button;
 
+const topContent = document.querySelector('body > div > section.main-content > div.top-content')
+window.content = topContent;
 
+topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"]
+
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+
+topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+const sections = ['services', 'product', 'vision']
+
+const bottomContent = Array.from(document.querySelector('body > div > section.main-content > div.bottom-content').children)
+bottomContent.forEach((section, i) => {
+  section.children[0].textContent = siteContent['main-content'][`${sections[i]}-h4`]
+  section.children[1].textContent = siteContent['main-content'][`${sections[i]}-content`]
+})
+window.bottomContent = bottomContent
 const banner = document.getElementById("middle-img");
 banner.setAttribute('src', "img/mid-page-accent.jpg");
+
 
 const bottom = document.querySelector('footer')
 bottom.textContent = siteContent.footer.copyright;
 
+const feature = document.getElementsByName('main-content');
+feature.textContent = siteContent["main-content"];
